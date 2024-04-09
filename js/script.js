@@ -7,9 +7,7 @@ const { createApp } = Vue
       }
     },
     methods: {
-        
-      },
-      mounted() {
+        generatorEmail() {
             for (let i = 0; i < 10; i++) {
                 axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
                 .then((response) => {
@@ -17,5 +15,10 @@ const { createApp } = Vue
                 this.emailArray.push(randomEmail);
             })
         }  
+        }
+        
+      },
+      mounted() {
+            this.generatorEmail()
     }
   }).mount('#app')
