@@ -9,7 +9,7 @@
 <body>
 
     <div id="app">
-        <div v-if="emailArray.length === 10">{{ emailArray }}</div>
+        <div v-if="emailArray.length === 10" v-for="email in emailArray">{{ email }}</div>
     </div>
     
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
